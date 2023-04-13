@@ -1,0 +1,68 @@
+<div class="cotainer">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>Alta libros</h4>
+            </div>
+            <div class="card-body">
+                <p>
+                    <label>Titulo:</label>
+                    <input type="text" class="form-control" [(ngModel)]="libro.titulo">
+                </p>
+                <p>
+                    <label>Autor:</label>
+                    <input type="text" class="form-control" [(ngModel)]="libro.autor">
+                </p>
+                <p>
+                    <label>Editorial:</label>
+                    <input type="text" class="form-control" [(ngModel)]="libro.editorial">
+                </p>
+                <p>
+                    <label>Año de publicación:</label>
+                    <input type="number" class="form-control" [(ngModel)]="libro.yearPublicacion">
+                </p>
+            </div>
+            <div class="card-footer">
+                <table>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-primary" (click) = "this.insertarLibro()">Insertar</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-warning" (click) = "this.updateLibro()">Actualizar</button>
+                        </td>
+                        
+                        <td>
+                            <button type="button" class="btn btn-danger" (click) = "this.deleteLibro(libro.id)">Eliminar</button>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <h1>Libros</h1>
+    <table class="table">
+        <thead>
+            <th id="color1">Titulo:</th>
+            <th id="color1">Autor:</th>
+            <th id="color1">Editorial:</th>
+            <th id="color1">Año de publicación:</th>
+            <th id="color1">Seleccionar:</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let libro of libros">
+                <td id="color1">{{ libro.titulo }}</td>
+                <td id="color2">{{ libro.autor }}</td>
+                <td id="color1">{{ libro.editorial }}</td>
+                <td id="color2">{{ libro.yearPublicacion }}</td>
+                <td id="color1">
+                    <button type="button" class="btn btn-primary" (click)="selectLibro(libro)">Seleccionar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

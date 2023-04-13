@@ -1,0 +1,32 @@
+.card-header{
+    background-color: #1C2833;
+    text-align: center;
+}
+
+.card-header h4{
+    color: white;
+    font-size: 30px;
+}
+
+.card-body label{
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-body input{
+    border: 2px solid #1C2833;
+}
+
+.card-footer{
+    background-color: #1C2833;
+}
+
+#color1{
+    background-color: #1C2833;
+    color: white;
+    font-weight: bold;
+}
+
+#color2{
+    background-color: white;
+    font-weight: bold;
+}
